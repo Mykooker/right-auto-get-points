@@ -27,6 +27,7 @@ def login(username, password):
         "username": username,
         "password": password,
     }
+    print("username"+username+"password"+password)
     s = requests.Session()
     s.post(url=login_url, data=login_data, headers=headers)
     return s
@@ -38,6 +39,7 @@ def check_login_status(s, number_c):
     res = s.get(test_url)
     res.encoding = "utf-8"
     test_title = re.findall("<title>.*?</title>", res.text)
+    print(test_title)
     if test_title[0] != "<title>个人资料 -  恩山无线论坛 -  Powered by Discuz!</title>":
         print("第" + str(number_c) + "个帐户登录失败！")
         return False
