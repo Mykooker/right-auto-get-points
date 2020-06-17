@@ -37,7 +37,7 @@ def login(username, password):
 def check_login_status(s, number_c):
     test_url = "https://www.right.com.cn/forum/home.php?mod=spacecp"
     res = s.get(test_url)
-    res.encoding = "utf-8"
+    res.encoding = "gbk"
     test_title = re.findall("<title>.*?</title>", res.text)
     print(test_title)
     if test_title[0] != "<title>个人资料 -  恩山无线论坛 -  Powered by Discuz!</title>":
