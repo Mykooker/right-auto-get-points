@@ -23,4 +23,4 @@ jobs:
       env:
         RIGHT_USERNAME: ${{ secrets.RIGHT_USERNAME }}
         RIGHT_PASSWORD: ${{ secrets.RIGHT_PASSWORD }}
-      run: python right_get_points.py
+      run: python get_right.py
